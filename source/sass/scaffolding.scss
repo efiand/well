@@ -1,0 +1,44 @@
+// Умолчания (сброс и нормализация)
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  @include visually-hidden();
+}
+
+.hidden {
+  display: none;
+}
+
+.unscrolled {
+  overflow: hidden;
+}
+
+
+// Задание порядка медиазапросов для корректного уменьшения их числа плагином css-mqpacker
+// Проверить в итоговом CSS и удалить пустые отсюда
+
+@media screen {
+  @include addition-medias("");
+
+  @media #{$mobile} {
+    /* mobile only*/
+
+    @include addition-medias(": mobile only");
+  }
+
+  @media #{$tablet} {
+    /* tablet */
+
+    @include addition-medias(": tablet");
+  }
+
+  @media #{$desktop} {
+    /* desktop */
+
+    @include addition-medias(": desktop");
+  }
+}

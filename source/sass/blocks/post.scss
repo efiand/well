@@ -1,0 +1,78 @@
+// Формы
+
+// Fieldset
+.post__section {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+// .post__section-title {} Legend
+
+// Обёртка внутри филдсета для flex в IE 11
+.post__groups-wrapper {
+  @media #{$tablet} {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+// Paragraph с полем и лейблом
+// .post__group {}
+
+.post__field {
+  box-sizing: border-box;
+  width: 100%;
+  // Высота для IE11
+  // height: ;
+  font-family: inherit;
+  border: solid 1px transparent; // Чтоб не мерцало при переходе
+  outline: none;
+
+  // &:focus {}
+
+  // Удаляет красную тень для невалидного поля в FF
+  &:invalid {
+    box-shadow: none;
+
+    // &:focus {box-shadow:;} Если тень нужна
+  }
+
+  &::placeholder {
+    opacity: 1;
+  }
+
+  // Поля ввода с datalist
+  &--select {
+    appearance: textfield;
+
+    &::-webkit-calendar-picker-indicator {
+      display: none;
+    }
+  }
+
+  // Textarea
+  &--text {
+    overflow: auto;
+    resize: none;
+  }
+
+  &[type="number"] {
+    appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      appearance: none;
+    }
+  }
+}
+
+.post__submit {
+  // &:hover:not(:disabled), &:focus {}
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
+  @include btn();
+}

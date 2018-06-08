@@ -1,0 +1,37 @@
+// Модальный контейнер с фоном-подложкой
+.popup {
+  &--modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  &--on {
+    display: flex;
+  }
+}
+
+.popup__board {
+  position: relative;
+  align-self: center;
+  padding: 30px;
+  background-color: #ffffff;
+  transition: all 0.3s ease-in-out;
+
+  &--overflowed {
+    align-self: flex-start;
+  }
+}
+
+.popup__closer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}

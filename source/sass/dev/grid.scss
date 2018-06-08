@@ -1,0 +1,20 @@
+.dev-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  background-image: linear-gradient(to right, #43fbff 1px, transparent 1px, transparent 20px, #43fbff 20px, #43fbff 21px, transparent 21px, transparent 300px, #43fbff 300px, #43fbff 301px, transparent 301px, transparent 319px, #43fbff 319px);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 320px 100%;
+  pointer-events: none;
+
+  @media ($tablet) {
+  }
+
+  @media ($desktop) {
+    background-image: linear-gradient(to right, #43fbff 1px, transparent 1px, transparent 73px, #43fbff 73px, #43fbff 74px, transparent 74px, transparent 93px, #43fbff 93px, #43fbff 94px, transparent 94px, transparent 113px, #43fbff 113px, #43fbff 114px, transparent 114px, transparent 209px, #43fbff 209px, #43fbff 210px, transparent 210px, transparent 229px, #43fbff 229px, #43fbff 230px, transparent 230px, transparent 325px, #43fbff 325px, #43fbff 326px, transparent 326px, transparent 345px, #43fbff 345px, #43fbff 346px, transparent 346px, transparent 441px, #43fbff 441px, #43fbff 442px, transparent 442px, transparent 461px, #43fbff 461px, #43fbff 462px, transparent 462px, transparent 557px, #43fbff 557px, #43fbff 558px, transparent 558px, transparent 577px, #43fbff 577px, #43fbff 578px, transparent 578px, transparent 673px, #43fbff 673px, #43fbff 674px, transparent 674px, transparent 693px, #43fbff 693px, #43fbff 694px, transparent 694px, transparent 789px, #43fbff 789px, #43fbff 790px, transparent 790px, transparent 809px, #43fbff 809px, #43fbff 810px, transparent 810px, transparent 905px, #43fbff 905px, #43fbff 906px, transparent 906px, transparent 925px, #43fbff 925px, #43fbff 926px, transparent 926px, transparent 1021px, #43fbff 1021px, #43fbff 1022px, transparent 1022px, transparent 1041px, #43fbff 1041px, #43fbff 1042px, transparent 1042px, transparent 1137px, #43fbff 1137px, #43fbff 1138px, transparent 1138px, transparent 1157px, #43fbff 1157px, #43fbff 1158px, transparent 1158px, transparent 1253px, #43fbff 1253px, #43fbff 1254px, transparent 1254px, transparent 1273px, #43fbff 1273px, #43fbff 1274px, transparent 1274px, transparent 1293px, #43fbff 1293px, #43fbff 1294px, transparent 1294px, transparent 1365px, #43fbff 1365px);
+    background-size: 1366px 100%;
+  }
+}
