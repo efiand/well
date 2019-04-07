@@ -1,0 +1,13 @@
+{
+  "src": [
+    "**/*.md",
+    "!node_modules/**/*.md"
+  ],
+  "lint": {
+    "rules": {
+      "first-heading-level": false,
+      "list-item-indent": "space",
+      "maximum-line-length": false
+    }
+  }
+}

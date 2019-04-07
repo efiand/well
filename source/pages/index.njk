@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru" prefix="og: http://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+
+  <title>{{ siteName }}</title>
+  <meta name="description" content="{{ pageDescription }}">
+  <link rel="canonical" href="{{ url }}">
+  <meta property="og:title" content="{{ siteName }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ url }}">
+  <meta property="og:determiner" content="the">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="{{ siteName }}">
+  <meta property="og:description" content="{{ pageDescription }}">
+  <meta property="og:image" content="{{ host }}/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="address=no">
+
+  {# Код, сгенерированный RealFaviconGenerator #}
+  {{ faviconsCode | manageRoot(host) }}
+
+  <style>
+    {% filter prepareInlineCss() %}
+      {% include "tmp/style" + minSuffix + ".css" %}
+    {% endfilter %}
+  </style>
+</head>
+
+<body>
+  <div class="hidden">
+    {% include "tmp/symbols.svg" %}
+  </div>
+
+  {% include "source/components/rules/rules.njk" %}
+  {% include "source/components/table/table.njk" %}
+
+  <script>
+    {% include "tmp/scripts" + minSuffix + ".js" %}
+  </script>
+</body>
+</html>
