@@ -1,0 +1,12 @@
+{
+  "dest": "build",
+  "lintspaces": {
+    "editorconfig": ".editorconfig"
+  },
+  "rename": {
+    "suffix": ".min"
+  },
+  "server": {
+    "server": "build"
+  }
+}

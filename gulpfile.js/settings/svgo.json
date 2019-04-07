@@ -1,0 +1,40 @@
+{
+  "plugins": [
+    {
+      "removeViewBox": false
+    },
+    {
+      "removeTitle": true
+    },
+    {
+      "cleanupNumericValues": {
+        "floatPrecision": 2
+      }
+    },
+    {
+      "cleanupNumericValues": {
+        "floatPrecision": 2
+      }
+    },
+    {
+      "convertPathData": {
+        "floatPrecision": 2
+      }
+    },
+    {
+      "transformsWithOnePath": {
+        "floatPrecision": 2
+      }
+    },
+    {
+      "convertTransform": {
+        "floatPrecision": 2
+      }
+    },
+    {
+      "cleanupListOfValues": {
+        "floatPrecision": 2
+      }
+    }
+  ]
+}

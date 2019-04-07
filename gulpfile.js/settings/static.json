@@ -1,0 +1,9 @@
+{
+  "src": {
+    "copy": "source/static/**/*",
+    "lintspaces": [
+      ".*",
+      "source/static/**/*.{php,xml,svg,html,css,js,json,txt}"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "editorconfig": true,
+  "end_with_newline": true,
+  "indent_size": 2,
+  "html": {
+    "content_unformatted": [
+      "pre",
+      "code"
+    ],
+    "extra_liners": [
+      "body",
+      "main",
+      "section",
+      "footer"
+    ],
+    "max_preserve_newlines": 0
+  },
+  "js": {
+    "max_preserve_newlines": 1
+  }
+}

@@ -1,8 +1,23 @@
-root: true
-
-env:
-  browser: true
-  node: true
-
-extends:
-  "htmlacademy/es5"
+{
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "extends": "htmlacademy/es6",
+  "rules": {
+    "no-console": "warn",
+    "no-irregular-whitespace": [
+      "off",
+      {
+        "skipRegExps": true,
+        "skipStrings": true
+      }
+    ],
+    "no-new": "off",
+    "object-curly-spacing": "off"
+  }
+}

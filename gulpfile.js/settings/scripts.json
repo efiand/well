@@ -1,0 +1,13 @@
+{
+  "src": {
+    "compile": "source/js/scripts.js",
+    "eslint": [
+      "gulpfile.js/**/*.js"
+    ],
+    "lintspaces": [
+      "source/**/*.js",
+      "gulpfile.js/**/*.js"
+    ]
+  },
+  "dest": "tmp"
+}
