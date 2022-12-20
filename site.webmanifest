@@ -3,12 +3,12 @@
     "short_name": "\u041f\u0430\u0441\u044c\u044f\u043d\u0441 \u00ab\u041a\u043e\u043b\u043e\u0434\u0435\u0446\u00bb",
     "icons": [
         {
-            "src": "/android-chrome-192x192.png",
+            "src": "android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/android-chrome-512x512.png",
+            "src": "android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         }
