@@ -4,10 +4,6 @@
     "lintspaces": [
       "source/**/*.njk",
       "source/data/**/*.json"
-    ],
-    "validate": [
-      "build/**/*.html",
-      "!build/amp/**/*.html"
     ]
   },
   "min": {
