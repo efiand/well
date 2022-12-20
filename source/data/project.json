@@ -32,7 +32,6 @@
     "build": [
       "clean",
       "tmp",
-      "favicons",
       "compile"
     ]
   },
