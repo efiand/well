@@ -42,7 +42,7 @@
     "gulp-remark-lint-dko": "^1.0.2",
     "gulp-rename": "^1.4.0",
     "gulp-replace": "^1.0.0",
-    "gulp-sass": "^4.0.x",
+    "gulp-sass": "^5.1.x",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-stylelint": "^8.0.0",
     "gulp-svgstore": "^7.0.1",
