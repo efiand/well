@@ -3,14 +3,16 @@
 const { gulp, plugins, settings } = require(`../store`);
 const { css, common } = settings.tasks;
 
+const sass = plugins.sass(require(`sass`));
+
 gulp.task(`css:compile`, () => {
   return gulp.src(css.src.compile)
     .pipe(plugins.plumber())
     .pipe(plugins.include())
     .pipe(plugins.if(settings.isDev, plugins.sourcemaps.init()))
-    .pipe(plugins.sass())
-    .pipe(plugins.combineMq())
+    .pipe(sass())
     .pipe(plugins.postcss([
+      require(`postcss-sort-media-queries`)(),
       require(`autoprefixer`)()
     ]))
     .pipe(plugins.csscomb())
