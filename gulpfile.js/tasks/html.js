@@ -41,10 +41,4 @@ gulp.task(`html:lintspaces`, () => {
     .pipe(plugins.lintspaces.reporter());
 });
 
-gulp.task(`html:validate`, () => {
-  return gulp.src(html.src.validate)
-    .pipe(plugins.w3cHtmlValidator())
-    .pipe(plugins.w3cHtmlValidator.reporter());
-});
-
 gulp.task(`html`, gulp.parallel(`html:compile`, `html:lintspaces`));

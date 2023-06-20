@@ -1,5 +1,5 @@
 'use strict';
-// Создание каталога /tmp для спрайтов, favicons и т.п.
+// Создание каталога /tmp для спрайтов и т.п.
 
 const { gulp } = require(`../store`);
 
