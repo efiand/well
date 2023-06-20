@@ -14,7 +14,7 @@
     "В один слот нельзя складывать карты разных мастей.",
     "Кнопка входа в данное меню находится в нижнем ряду справа."
   ],
-  "copy": "© Разработка — <a href=\"https://efiand.ru\">Андрей Ефимов</a>, иллюстрации — <a href=\"https://ru.freepik.com\">freepik</a>.",
+  "copy": "© Разработка — <a href=\"https://pineglade.ru\">Pineglade</a>, иллюстрации — <a href=\"https://ru.freepik.com\">freepik</a>.",
   "tasks": {
     "compile": [
       "symbols",
@@ -32,7 +32,6 @@
     "build": [
       "clean",
       "tmp",
-      "favicons",
       "compile"
     ]
   },
