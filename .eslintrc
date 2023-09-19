@@ -1,8 +1,23 @@
-root: true
-
-env:
-  browser: true
-  node: true
-
-extends:
-  "htmlacademy/es5"
+{
+	"root": true,
+	"parserOptions": {
+		"ecmaVersion": 2018,
+		"sourceType": "module"
+	},
+	"env": {
+		"es2017": true,
+		"browser": true,
+		"node": true
+	},
+	"extends": "htmlacademy/vanilla",
+	"rules": {
+		"no-magic-numbers": ["error", { "ignore": [-1, 0, 1, 10, 100] }],
+		"indent": [
+			"error",
+			"tab",
+			{
+				"SwitchCase": 1
+			}
+		]
+	}
+}

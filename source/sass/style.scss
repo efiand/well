@@ -1,8 +1,7 @@
-@import "variables.scss";
-@import "mixins.scss";
-@import "scaffolding.scss";
-@import "keyframes.scss";
-@import "blocks/page.scss";
-@import "blocks/main.scss";
-@import "blocks/post.scss";
-@import "blocks/popup.scss";
+@import "base/variables";
+@import "base/global";
+@import "blocks/card";
+@import "blocks/rules";
+@import "blocks/table";
+@import "blocks/visually-hidden";
+@import "base/helpers";
