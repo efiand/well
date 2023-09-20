@@ -1,11 +1,11 @@
 // Приложение по управлению данными (ваш маленький бэкенд)
 
-const host = 'https://well.pineglade.ru';
+const host = 'https://well.efiand.vercel.app';
 
 export default async ({ State }) => ({
 	State,
 	backText: 'Вернуться к игре',
-	copy: '© Разработка — <a href="https://pineglade.ru">Pineglade</a>, иллюстрации — <a href="https://ru.freepik.com">freepik</a>.',
+	copy: '© Разработка — <a href="https://efiand.vercel.app">efiand</a>, иллюстрации — <a href="https://ru.freepik.com">freepik</a>.',
 	host,
 	pageDescription: 'Карточная игра для настольных и мобильных браузеров',
 	rules: [
