@@ -1,12 +1,10 @@
+*.log
+*.sublime*
 .DS_Store
 .idea
-*.ai
-*.log
-*.pdf
-*.psd
-*.sublime*
+.vscode
+Thumbs.db
+dev/
 build/
 node_modules/
 npm-debug.*
-Thumbs.db
-tmp/
