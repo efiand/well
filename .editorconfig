@@ -1,0 +1,13 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = tab
+indent_style = tab
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.svg]
+# Векторные изображения могут храниться в минифицированном виде, лишняя строка не нужна
+insert_final_newline = false
