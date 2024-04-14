@@ -1,10 +1,7 @@
 *.log
-*.sublime*
+*.log*
 .DS_Store
-.idea
-.vscode
-Thumbs.db
-dev/
-build/
-node_modules/
-npm-debug.*
+.vscode/*
+!.vscode/extensions.json
+dist
+node_modules
