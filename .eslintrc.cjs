@@ -10,6 +10,7 @@ module.exports = {
 	globals: {
 		document: 'readonly',
 		window: 'readonly',
+		URL: 'readonly',
 	},
 	parserOptions: {
 		ecmaVersion: 'latest',
