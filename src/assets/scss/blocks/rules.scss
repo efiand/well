@@ -47,6 +47,8 @@
 	padding: 1rem 0;
 	font-size: 1rem;
 	font-family: inherit;
+	text-align: center;
+	text-decoration: none;
 	background-color: $gray;
 	border: none;
 	border-radius: 1.25rem;
@@ -55,6 +57,10 @@
 	cursor: pointer;
 	transition: all 0.3s ease-in-out;
 	user-select: none;
+
+	@include mobile {
+		max-width: none;
+	}
 
 	&:hover,
 	&:focus {

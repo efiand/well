@@ -4,6 +4,7 @@ import { getDropCoords } from '@/modules/functions/get-drop-coords';
 import { reloadHandler } from '@/modules/functions/reload-handler';
 import { restartHandler } from '@/modules/functions/restart-handler';
 import { rulesOpenHandler } from '@/modules/functions/rules-open-handler';
+import '@/modules/tg';
 
 const CARDS_IN_KEYS = 14;
 

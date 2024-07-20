@@ -9,7 +9,7 @@ html {
 	scroll-behavior: smooth;
 	overflow-anchor: none;
 
-	@media (max-width: 480px) and (min-height: 150vw) {
+	@media (max-width: 767px), (min-height: 150vw) {
 		font-size: 14px;
 	}
 }
