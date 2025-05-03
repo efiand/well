@@ -1,103 +1,216 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Пасьянс «Колодец»</title>
+		<meta
+			name="description"
+			content="Карточная игра для настольных и мобильных браузеров"
+		/>
+		<meta property="og:title" content="Пасьянс «Колодец»" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://well.efiand.ru" />
+		<meta property="og:determiner" content="the" />
+		<meta property="og:locale" content="ru_RU" />
+		<meta property="og:site_name" content="Пасьянс «Колодец»" />
+		<meta
+			property="og:description"
+			content="Карточная игра для настольных и мобильных браузеров"
+		/>
+		<meta
+			property="og:image"
+			content="https://well.efiand.ru/apple-touch-icon.png"
+		/>
+		<link rel="canonical" href="https://well.efiand.ru" />
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+		<link rel="manifest" href="site.webmanifest" />
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#c42b16" />
+		<meta name="msapplication-TileColor" content="#c42b16" />
+		<meta name="theme-color" content="#ffffff" />
+		<meta name="HandheldFriendly" content="True" />
+		<meta name="MobileOptimized" content="320" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="format-detection" content="address=no" />
+		<link rel="stylesheet" href="/src/assets/scss/main.scss" />
 
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Пасьянс «Колодец»</title>
-	<meta name="description" content="Карточная игра для настольных и мобильных браузеров">
-	<meta property="og:title" content="Пасьянс «Колодец»">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://well.efiand.ru">
-	<meta property="og:determiner" content="the">
-	<meta property="og:locale" content="ru_RU">
-	<meta property="og:site_name" content="Пасьянс «Колодец»">
-	<meta property="og:description" content="Карточная игра для настольных и мобильных браузеров">
-	<meta property="og:image" content="https://well.efiand.ru/apple-touch-icon.png">
-	<link rel="canonical" href="https://well.efiand.ru">
-	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-	<link rel="manifest" href="site.webmanifest">
-	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#c42b16">
-	<meta name="msapplication-TileColor" content="#c42b16">
-	<meta name="theme-color" content="#ffffff">
-	<meta name="HandheldFriendly" content="True">
-	<meta name="MobileOptimized" content="320">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="format-detection" content="telephone=no">
-	<meta name="format-detection" content="address=no">
-	<link rel="stylesheet" href="/src/assets/scss/main.scss">
-</head>
+		<!-- Yandex.Metrika counter -->
+		<script type="text/javascript">
+			(function (m, e, t, r, i, k, a) {
+				m[i] =
+					m[i] ||
+					function () {
+						(m[i].a = m[i].a || []).push(arguments);
+					};
+				m[i].l = 1 * new Date();
+				for (var j = 0; j < document.scripts.length; j++) {
+					if (document.scripts[j].src === r) {
+						return;
+					}
+				}
+				(k = e.createElement(t)),
+					(a = e.getElementsByTagName(t)[0]),
+					(k.async = 1),
+					(k.src = r),
+					a.parentNode.insertBefore(k, a);
+			})(
+				window,
+				document,
+				"script",
+				"https://mc.yandex.ru/metrika/tag.js",
+				"ym",
+			);
 
-<body>
-	<div style="display: none">
-		<%- sprite %>
-	</div>
-	<main>
-		<section class="rules">
-			<div class="rules__inner">
-				<h1 class="rules__header">Пасьянс «Колодец»</h1>
-				<p class="hidden rules__win">Вы победили!</p>
-				<div class="rules__group">
-					<button class="hidden rules__button rules__closer" type="button">
-						Вернуться к игре
-					</button>
-					<button class="rules__button rules__restart" type="button">Разложить</button>
-					<a class="rules__button rules__telegram" href="https://t.me/WellCardGameBot" target="_blank">
-						Играть в Telegram
-					</a>
+			ym(99938263, "init", {
+				clickmap: true,
+				trackLinks: true,
+				accurateTrackBounce: true,
+				webvisor: true,
+			});
+		</script>
+		<!-- /Yandex.Metrika counter -->
+	</head>
+
+	<body>
+		<div style="display: none"><%- sprite %></div>
+		<main>
+			<section class="rules">
+				<div class="rules__inner">
+					<h1 class="rules__header">Пасьянс «Колодец»</h1>
+					<p class="hidden rules__win">Вы победили!</p>
+					<div class="rules__group">
+						<button class="hidden rules__button rules__closer" type="button">
+							Вернуться к игре
+						</button>
+						<button class="rules__button rules__restart" type="button">
+							Разложить
+						</button>
+						<a
+							class="rules__button rules__telegram"
+							href="https://t.me/WellCardGameBot"
+							target="_blank"
+						>
+							Играть в Telegram
+						</a>
+					</div>
+					<p class="rules__text">
+						Цель игры — собрать 104 карты (2 колоды) в четырёх угловых слотах,
+						повёрнутых на 45°. На каждый слот кладутся карты одной масти в
+						порядке уменьшения достоинства — от короля до туза, затем король и
+						так далее до второго туза.
+					</p>
+					<p class="rules__text">
+						Изначально карты повёрнуты к игроку рубашкой и находятся в пяти
+						колодах: четыре верхних (по 11 карт) — по сторонам от центрального
+						слота, пятая — в левом нижнем углу.
+					</p>
+					<p class="rules__text">
+						В каждой верхней колоде открывается (клик по рубашке) одна карта. С
+						нижней колоды после клика карты снимаются на расположенные в этом же
+						ряду слоты: сначала на все 5, потом, когда колода закончится, кликом
+						по её слоту (обозначенному кружком), она вновь собирается и
+						раскладывается уже по 4 карты, потом по 3, потом по 2, потом по 1.
+					</p>
+					<p class="rules__text">
+						Все открываемые карты независимо от колоды можно складывать не
+						только на угловые слоты, но и на любые слоты, расположенные около
+						верхних колод (в порядке возрастания начиная с любой карты), или на
+						центральный слот (в порядке возрастания начиная с туза).
+					</p>
+					<p class="rules__text">
+						В один слот нельзя складывать карты разных мастей.
+					</p>
+					<p class="rules__text">
+						Кнопка входа в данное меню находится в нижнем ряду справа.
+					</p>
+					<p class="rules__copy">
+						© Разработка — <a href="https://efiand.ru">efiand</a>, иллюстрации
+						— <a href="https://ru.freepik.com">freepik</a>.
+					</p>
 				</div>
-				<p class="rules__text">
-					Цель игры — собрать 104 карты (2 колоды) в четырёх угловых слотах, повёрнутых на 45°. На каждый слот кладутся карты одной масти в порядке уменьшения достоинства — от короля до туза, затем король и так далее до второго туза.
-				</p>
-				<p class="rules__text">
-					Изначально карты повёрнуты к игроку рубашкой и находятся в пяти колодах: четыре верхних (по 11 карт) — по сторонам от центрального слота, пятая — в левом нижнем углу.
-				</p>
-				<p class="rules__text">
-					В каждой верхней колоде открывается (клик по рубашке) одна карта. С нижней колоды после клика карты снимаются на расположенные в этом же ряду слоты: сначала на все 5, потом, когда колода закончится, кликом по её слоту (обозначенному кружком), она вновь собирается и раскладывается уже по 4 карты, потом по 3, потом по 2, потом по 1.
-				</p>
-				<p class="rules__text">
-					Все открываемые карты независимо от колоды можно складывать не только на угловые слоты, но и на любые слоты, расположенные около верхних колод (в порядке возрастания начиная с любой карты), или на центральный слот (в порядке возрастания начиная с туза).
-				</p>
-				<p class="rules__text">
-					В один слот нельзя складывать карты разных мастей.
-				</p>
-				<p class="rules__text">
-					Кнопка входа в данное меню находится в нижнем ряду справа.
-				</p>
-				<p class="rules__copy">
-					© Разработка — <a href="https://efiand.ru">efiand</a>, иллюстрации — <a href="https://ru.freepik.com">freepik</a>.
-				</p>
-			</div>
-		</section>
-		<section class="table">
-			<h2 class="visually-hidden">Стопки карт</h2>
-			<div class="card card--corner-top-left card--empty" data-accept="any-13">Левый верхний угол</div>
-			<div class="card card--corner-top-right card--empty" data-accept="any-13">Правый верхний угол</div>
-			<div class="card card--acceptor-top card--empty">Верхняя колода наполнения</div>
-			<div class="card card--donor-top card--empty">Верхняя колода взятия</div>
-			<div class="card card--acceptor-left card--empty">Левая колода наполнения</div>
-			<div class="card card--donor-left card--empty">Левая колода взятия</div>
-			<div class="card card--central card--empty" data-accept="any-1">Центральная колода</div>
-			<div class="card card--acceptor-right card--empty">Правая колода наполнения</div>
-			<div class="card card--donor-right card--empty">Правая колода взятия</div>
-			<div class="card card--acceptor-bottom card--empty">Нижняя колода наполнения</div>
-			<div class="card card--donor-bottom card--empty">Нижняя колода взятия</div>
-			<div class="card card--corner-bottom-left card--empty" data-accept="any-13">Левый нижний угол</div>
-			<div class="card card--corner-bottom-right card--empty" data-accept="any-13">Правый нижний угол</div><button
-				class="card card--control card--reload card--run" title="Начать повторную раскладку на 4 слота">Перевернуть
-				колоду</button>
-			<div class="card card--control card--empty card--work-1">Место для карты № 1</div>
-			<div class="card card--control card--empty card--work-2">Место для карты № 2</div>
-			<div class="card card--control card--empty card--work-3">Место для карты № 3</div>
-			<div class="card card--control card--empty card--work-4">Место для карты № 4</div>
-			<div class="card card--control card--empty card--work-5">Место для карты № 5</div>
-			<button class="card card--control card--menu table__rules-opener"  title="Правила">
-				Меню
-			</button>
-		</section>
-	</main>
-</body>
-
+			</section>
+			<section class="table">
+				<h2 class="visually-hidden">Стопки карт</h2>
+				<div
+					class="card card--corner-top-left card--empty"
+					data-accept="any-13"
+				>
+					Левый верхний угол
+				</div>
+				<div
+					class="card card--corner-top-right card--empty"
+					data-accept="any-13"
+				>
+					Правый верхний угол
+				</div>
+				<div class="card card--acceptor-top card--empty">
+					Верхняя колода наполнения
+				</div>
+				<div class="card card--donor-top card--empty">
+					Верхняя колода взятия
+				</div>
+				<div class="card card--acceptor-left card--empty">
+					Левая колода наполнения
+				</div>
+				<div class="card card--donor-left card--empty">Левая колода взятия</div>
+				<div class="card card--central card--empty" data-accept="any-1">
+					Центральная колода
+				</div>
+				<div class="card card--acceptor-right card--empty">
+					Правая колода наполнения
+				</div>
+				<div class="card card--donor-right card--empty">
+					Правая колода взятия
+				</div>
+				<div class="card card--acceptor-bottom card--empty">
+					Нижняя колода наполнения
+				</div>
+				<div class="card card--donor-bottom card--empty">
+					Нижняя колода взятия
+				</div>
+				<div
+					class="card card--corner-bottom-left card--empty"
+					data-accept="any-13"
+				>
+					Левый нижний угол
+				</div>
+				<div
+					class="card card--corner-bottom-right card--empty"
+					data-accept="any-13"
+				>
+					Правый нижний угол
+				</div>
+				<button
+					class="card card--control card--reload card--run"
+					title="Начать повторную раскладку на 4 слота"
+				>
+					Перевернуть колоду
+				</button>
+				<div class="card card--control card--empty card--work-1">
+					Место для карты № 1
+				</div>
+				<div class="card card--control card--empty card--work-2">
+					Место для карты № 2
+				</div>
+				<div class="card card--control card--empty card--work-3">
+					Место для карты № 3
+				</div>
+				<div class="card card--control card--empty card--work-4">
+					Место для карты № 4
+				</div>
+				<div class="card card--control card--empty card--work-5">
+					Место для карты № 5
+				</div>
+				<button
+					class="card card--control card--menu table__rules-opener"
+					title="Правила"
+				>
+					Меню
+				</button>
+			</section>
+		</main>
+	</body>
 </html>
