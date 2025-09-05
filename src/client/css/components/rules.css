@@ -1,0 +1,101 @@
+.rules {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	overflow: auto;
+	background-color: #000000b3;
+}
+
+.rules__inner {
+	box-sizing: border-box;
+	padding: 1.5rem 2rem;
+	background-color: #ffffff;
+}
+
+.rules__header {
+	margin: 0.75rem 0 2rem;
+	font-weight: 700;
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+.rules__group {
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 2.5rem;
+	padding-bottom: 2rem;
+	border-bottom: 2px solid #c42b16;
+}
+
+.rules__text {
+	margin: 0.75rem 0 0;
+}
+
+.rules__button {
+	width: 100%;
+	max-width: 250px;
+	margin: 1rem;
+	padding: 1rem 0;
+	font-size: 1rem;
+	font-family: inherit;
+	text-align: center;
+	text-decoration: none;
+	background-color: #999999;
+	border: none;
+	border-radius: 1.25rem;
+	outline: 0;
+	box-shadow: 0 2px 2px #000000b3;
+	cursor: pointer;
+	transition: var(--transition);
+	transition-property: color, background-color, box-shadow, opacity;
+	user-select: none;
+}
+
+.rules__win {
+	margin: 0 0 2.5rem;
+	font-size: 2.5rem;
+	text-align: center;
+	color: #c42b16;
+}
+
+.rules__copy {
+	margin-top: 2.5rem;
+	padding-top: 1.25rem;
+	font-size: 0.85rem;
+	text-align: center;
+	color: #999999;
+	border-top: 2px solid #c42b16;
+}
+
+@media (hover: hover) {
+	.rules__button:focus,
+	.rules__button:hover {
+		color: #ffffff;
+		background-color: #c42b16;
+		box-shadow: 0 2px 2px #c42b164d;
+	}
+	.rules__button:active {
+		box-shadow: none;
+		opacity: 0.8;
+	}
+}
+@media (min-width: 768px) {
+	.rules__inner {
+		width: calc(100% - 2.5rem);
+		max-width: 50rem;
+		margin: 1.25rem auto;
+		padding: 2.5rem 3rem;
+	}
+}
+
+@media (max-width: 767px), (max-height: 600px) {
+	.rules__button {
+		max-width: none;
+	}
+}

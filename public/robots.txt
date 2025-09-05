@@ -1,0 +1,4 @@
+User-agent: *
+Host: https://well.efiand.ru
+Sitemap: https://well.efiand.ru/sitemap.xml
+Disallow: /404.html

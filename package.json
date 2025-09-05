@@ -1,0 +1,44 @@
+{
+	"devDependencies": {
+		"@biomejs/biome": "2.2.2",
+		"@fastify/pre-commit": "2.2.0",
+		"@types/node": "24.3.1",
+		"@types/postcss-import": "14.0.3",
+		"@types/postcss-url": "10.0.4",
+		"cssnano": "7.1.1",
+		"fast-xml-parser": "5.2.5",
+		"html-validate": "10.0.0",
+		"nodemon": "3.1.10",
+		"postcss": "8.5.6",
+		"postcss-cli": "11.0.1",
+		"postcss-import": "16.1.1",
+		"postcss-sort-media-queries": "5.2.0",
+		"postcss-url": "10.1.3",
+		"posthtml-bem-linter": "0.1.8",
+		"rolldown": "1.0.0-beta.35",
+		"typescript": "5.9.2"
+	},
+	"imports": {
+		"#client/*": "./src/client/*",
+		"#common/*": "./app/common/*",
+		"#server/*": "./app/server/*"
+	},
+	"main": "./app/server/main.js",
+	"name": "efiand.ru",
+	"pre-commit": [
+		"lint-format",
+		"test"
+	],
+	"private": true,
+	"scripts": {
+		"build": "node ./tools/build.js",
+		"dev": "nodemon ./src/server/main.js",
+		"lint": "npm run type-check && biome check",
+		"lint-format": "npm run type-check && biome check --write",
+		"preview": "node ./src/server/main.js",
+		"test": "npm run build && node --test",
+		"type-check": "tsc -p ./tsconfig.json",
+		"upgrade": "node ./tools/upgrade.js"
+	},
+	"type": "module"
+}

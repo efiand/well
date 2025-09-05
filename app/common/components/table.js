@@ -1,0 +1,28 @@
+import { html } from "#common/utils/mark-template.js";
+
+export const TABLE_TEMPLATE = html`
+	<div class="table">
+		<div class="card card--corner-top-left card--empty" data-accept="any-13">Левый верхний угол</div>
+		<div class="card card--corner-top-right card--empty" data-accept="any-13">Правый верхний угол</div>
+		<div class="card card--acceptor-top card--empty">Верхняя колода наполнения</div>
+		<div class="card card--donor-top card--empty">Верхняя колода взятия</div>
+		<div class="card card--acceptor-left card--empty">Левая колода наполнения</div>
+		<div class="card card--donor-left card--empty">Левая колода взятия</div>
+		<div class="card card--central card--empty" data-accept="any-1">Центральная колода</div>
+		<div class="card card--acceptor-right card--empty">Правая колода наполнения</div>
+		<div class="card card--donor-right card--empty">Правая колода взятия</div>
+		<div class="card card--acceptor-bottom card--empty">Нижняя колода наполнения</div>
+		<div class="card card--donor-bottom card--empty">Нижняя колода взятия</div>
+		<div class="card card--corner-bottom-left card--empty" data-accept="any-13">Левый нижний угол</div>
+		<div class="card card--corner-bottom-right card--empty" data-accept="any-13">Правый нижний угол</div>
+		<button class="card card--control card--reload card--run" title="Начать повторную раскладку на 4 слота" type="button">
+			Перевернуть колоду
+		</button>
+		<div class="card card--control card--empty card--work-1">Место для карты № 1</div>
+		<div class="card card--control card--empty card--work-2">Место для карты № 2</div>
+		<div class="card card--control card--empty card--work-3">Место для карты № 3</div>
+		<div class="card card--control card--empty card--work-4">Место для карты № 4</div>
+		<div class="card card--control card--empty card--work-5">Место для карты № 5</div>
+		<button class="card card--control card--menu table__rules-opener" title="Правила" type="button">Меню</button>
+	</div>
+`;
