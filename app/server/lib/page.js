@@ -9,7 +9,7 @@ let cssCache = "";
 let jsCache = "";
 
 /** @type {(data: LayoutData) => Promise<string>} */
-export async function renderPage({ pageTemplate = "", pathname = "" }) {
+export async function renderPage({ headTemplate = "", pageTemplate = "", pathname = "" }) {
 	if (!cssCache) {
 		cssCache = await getCss("main.css");
 	}
@@ -46,6 +46,7 @@ export async function renderPage({ pageTemplate = "", pathname = "" }) {
 
 				<style>${cssCache}</style>
 				<script type="module">${jsCache}</script>
+				${headTemplate}
 				${devTemplate}
 			</head>
 

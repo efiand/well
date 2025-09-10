@@ -25,7 +25,6 @@ export const YANDEX_METRIKA_TEMPLATE = html`
 		ym(99938263, "init", {
 			accurateTrackBounce: true,
 			clickmap: true,
-			defer: true,
 			trackLinks: true,
 			webvisor: true,
 		});
