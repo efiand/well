@@ -51,10 +51,10 @@ export async function renderPage({ headTemplate = "", pageTemplate = "", pathnam
 			</head>
 
 			<body>
-      	${isDev ? "" : YANDEX_METRIKA_TEMPLATE}
 				<div hidden>${SPRITE_TEMPLATE}</div>
 
 				<main>${pageTemplate}</main>
+      	${isDev ? "" : YANDEX_METRIKA_TEMPLATE}
 			</body>
 		</html>
 	`;

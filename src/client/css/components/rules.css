@@ -69,7 +69,6 @@
 	padding-top: 1.25rem;
 	font-size: 0.85rem;
 	text-align: center;
-	color: #999999;
 	border-top: 2px solid #c42b16;
 }
 
@@ -85,6 +84,7 @@
 		opacity: 0.8;
 	}
 }
+
 @media (min-width: 768px) {
 	.rules__inner {
 		width: calc(100% - 2.5rem);
