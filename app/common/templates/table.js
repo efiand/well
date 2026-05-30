@@ -1,6 +1,4 @@
-import { html } from "#common/utils/mark-template.js";
-
-export const TABLE_TEMPLATE = html`
+export const TABLE_TEMPLATE = /* html */ `
 	<div class="table">
 		<div class="card card--corner-top-left card--empty" data-accept="any-13">Левый верхний угол</div>
 		<div class="card card--corner-top-right card--empty" data-accept="any-13">Правый верхний угол</div>

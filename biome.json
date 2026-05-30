@@ -1,57 +1,61 @@
 {
-	"$schema": "https://biomejs.dev/schemas/2.2.2/schema.json",
-	"vcs": {
-		"enabled": true,
-		"clientKind": "git",
-		"useIgnoreFile": true
+	"$schema": "https://biomejs.dev/schemas/2.4.16/schema.json",
+	"assist": {
+		"actions": {
+			"source": {
+				"organizeImports": "on",
+				"useSortedKeys": "on"
+			}
+		},
+		"enabled": true
 	},
 	"files": {
-		"ignoreUnknown": true
+		"ignoreUnknown": true,
+		"includes": ["**", "!public"]
 	},
 	"formatter": {
 		"enabled": true,
 		"indentStyle": "tab",
 		"lineWidth": 120
 	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "single"
+		}
+	},
 	"linter": {
-		"domains": {
-			"project": "all"
-		},
+		"domains": { "project": "all" },
 		"enabled": true,
 		"rules": {
-			"recommended": true,
-			"complexity": {
-				"noUselessStringConcat": "error"
-			},
+			"complexity": { "noUselessStringConcat": "error" },
 			"correctness": {
-				"noUnusedVariables": "error",
+				"noUnusedFunctionParameters": "error",
 				"noUnusedImports": "error",
-				"noUnusedFunctionParameters": "error"
+				"noUnusedVariables": "error"
 			},
-			"performance": {
-				"noAccumulatingSpread": "error"
-			},
+			"performance": { "noAccumulatingSpread": "error" },
+			"recommended": true,
 			"style": {
-				"useConst": { "fix": "none", "level": "error", "options": {} }
+				"useBlockStatements": "error",
+				"useConst": {
+					"fix": "none",
+					"level": "error",
+					"options": {}
+				}
 			},
 			"suspicious": {
 				"noConsole": {
 					"fix": "none",
 					"level": "error",
-					"options": {
-						"allow": ["assert", "error", "info", "warn"]
-					}
+					"options": { "allow": ["assert", "error", "info", "warn"] }
 				},
 				"noGlobalIsNan": "error"
 			}
 		}
 	},
-	"assist": {
+	"vcs": {
+		"clientKind": "git",
 		"enabled": true,
-		"actions": {
-			"source": {
-				"organizeImports": "on"
-			}
-		}
+		"useIgnoreFile": true
 	}
 }

@@ -1,24 +1,23 @@
-import { SPRITE_TEMPLATE } from "#common/components/sprite.js";
-import { BASE_URL } from "#common/constants.js";
-import { YANDEX_METRIKA_TEMPLATE } from "#common/lib/yandex-metrika.js";
-import { html } from "#common/utils/mark-template.js";
-import { isDev } from "#server/constants.js";
-import { getCss, getJs } from "#server/lib/bundle.js";
+import { BASE_URL } from '#common/constants.js';
+import { SPRITE_TEMPLATE } from '#common/templates/sprite.js';
+import { YANDEX_METRIKA_TEMPLATE } from '#common/templates/yandex-metrika.js';
+import { isDev } from '#server/constants.js';
+import { getCss, getJs } from '#server/lib/bundle.js';
 
-let cssCache = "";
-let jsCache = "";
+let cssCache = '';
+let jsCache = '';
 
 /** @type {(data: LayoutData) => Promise<string>} */
-export async function renderPage({ headTemplate = "", pageTemplate = "", pathname = "" }) {
+export async function renderPage({ headTemplate = '', pageTemplate = '' }) {
 	if (!cssCache) {
-		cssCache = await getCss("main.css");
+		cssCache = await getCss('main.css');
 	}
 	if (!jsCache) {
-		jsCache = await getJs("main.js");
+		jsCache = await getJs('main.js');
 	}
-	const devTemplate = isDev ? html`<script src="/client/dev.js" type="module"></script>` : "";
+	const devTemplate = isDev ? /* html */ `<script src="/client/dev.js" type="module"></script>` : '';
 
-	return html`
+	return /* html */ `
 		<!DOCTYPE html>
 		<html lang="ru" prefix="og: http://ogp.me/ns#">
 			<head>
@@ -31,8 +30,8 @@ export async function renderPage({ headTemplate = "", pageTemplate = "", pathnam
 				<meta name="description" content="Карточная игра для настольных и мобильных браузеров">
 				<meta property="og:description" content="Карточная игра для настольных и мобильных браузеров">
 
-				<meta property="og:url" content="${pathname}">
-				<link rel="canonical" href="${BASE_URL}${pathname}">
+				<meta property="og:url" content="${BASE_URL}">
+				<link rel="canonical" href="${BASE_URL}">
 
 				<meta property="og:locale" content="ru_RU">
 				<meta property="og:type" content="website">
@@ -54,7 +53,7 @@ export async function renderPage({ headTemplate = "", pageTemplate = "", pathnam
 				<div hidden>${SPRITE_TEMPLATE}</div>
 
 				<main>${pageTemplate}</main>
-      	${isDev ? "" : YANDEX_METRIKA_TEMPLATE}
+      	${isDev ? '' : YANDEX_METRIKA_TEMPLATE}
 			</body>
 		</html>
 	`;

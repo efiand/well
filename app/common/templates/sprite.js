@@ -1,6 +1,4 @@
-import { html } from "#common/utils/mark-template.js";
-
-export const SPRITE_TEMPLATE = html`
+export const SPRITE_TEMPLATE = /* html */ `
 	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 		<symbol id="clubs-1" viewbox="0 0 75 100">
 			<rect fill="none" width="75" height="100"/>

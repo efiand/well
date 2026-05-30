@@ -1,53 +1,23 @@
-import { NonNull } from "#common/utils/non-null.js";
+/** Поле игры */
+export const tableElement = /** @type {HTMLElement} */ (document.querySelector('.table'));
 
-/**
- * Поле игры
- *
- * @type {HTMLElement}
- */
-export const tableElement = NonNull(document.querySelector(".table"));
+/** Модальное окно с правилами */
+export const rulesElement = /** @type {HTMLElement} */ (document.querySelector('.rules'));
 
-/**
- * Модальное окно с правилами
- *
- * @type {HTMLElement}
- */
-export const rulesElement = NonNull(document.querySelector(".rules"));
+/** Кнопка закрытия правил */
+export const closeButtonElement = /** @type {HTMLElement} */ (rulesElement.querySelector('.rules__closer'));
 
-/**
- * Кнопка закрытия правил
- *
- * @type {HTMLElement}
- */
-export const closeButtonElement = NonNull(rulesElement.querySelector(".rules__closer"));
+/** Кнопка перезапуска */
+export const restartButtonElement = /** @type {HTMLElement} */ (rulesElement.querySelector('.rules__restart'));
 
-/**
- * Кнопка перезапуска
- *
- * @type {HTMLElement}
- */
-export const restartButtonElement = NonNull(rulesElement.querySelector(".rules__restart"));
+/** Сообщение о выигрыше */
+export const winMessageElement = /** @type {HTMLElement} */ (rulesElement.querySelector('.rules__win'));
 
-/**
- * Сообщение о выигрыше
- *
- * @type {HTMLElement}
- */
-export const winMessageElement = NonNull(rulesElement.querySelector(".rules__win"));
+/** Кнопка сдачи карт  */
+export const reloadButttonElement = /** @type {HTMLElement} */ (tableElement.querySelector('.card--reload'));
 
-/**
- * Кнопка сдачи карт
- *
- * @type {HTMLElement}
- */
-export const reloadButttonElement = NonNull(tableElement.querySelector(".card--reload"));
-
-/**
- * Кнопка открытия модального окна
- *
- * @type {HTMLElement}
- */
-export const rulesOpenerElement = NonNull(tableElement.querySelector(".table__rules-opener"));
+/** Кнопка открытия модального окна */
+export const rulesOpenerElement = /** @type {HTMLElement} */ (tableElement.querySelector('.table__rules-opener'));
 
 /**
  * Величина отступа от края браузера до края стола

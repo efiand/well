@@ -1,4 +1,4 @@
-import { closeButtonElement, rulesOpenerElement, winMessageElement } from "#client/modules/settings.js";
+import { closeButtonElement, rulesOpenerElement, winMessageElement } from '#client/modules/settings.js';
 
 /** Показ сообщения о выигрыше */
 export function showWinMessage() {

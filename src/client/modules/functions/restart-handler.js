@@ -1,6 +1,6 @@
-import { clearShadows } from "#client/modules/functions/clear-shadows.js";
-import { createDeck } from "#client/modules/functions/create-deck.js";
-import { removeCard } from "#client/modules/functions/remove-card.js";
+import { clearShadows } from '#client/modules/functions/clear-shadows.js';
+import { createDeck } from '#client/modules/functions/create-deck.js';
+import { removeCard } from '#client/modules/functions/remove-card.js';
 import {
 	closeButtonElement,
 	reloadButttonElement,
@@ -8,13 +8,20 @@ import {
 	rulesElement,
 	tableElement,
 	winMessageElement,
-} from "#client/modules/settings.js";
-import { NUMBER_OF_SLOTS, STATE } from "#client/modules/state.js";
+} from '#client/modules/settings.js';
+import { NUMBER_OF_SLOTS, STATE } from '#client/modules/state.js';
 
 const TIMEOUT = 300;
 
+export function closeRules() {
+	rulesElement.hidden = true;
+	if (window.location.hash) {
+		history.replaceState(null, '', window.location.pathname + window.location.search);
+	}
+}
+
 /** Перезапуск игры со сменой колоды */
-export const restartHandler = () => {
+export function restartHandler() {
 	clearShadows();
 
 	// Обновляем количество слотов, количество окончательно собранных карт и отсчет формирования колод
@@ -23,7 +30,7 @@ export const restartHandler = () => {
 	STATE.cornerSuits = [];
 
 	/** @type {NodeListOf<HTMLElement>} */
-	const existsCardElements = tableElement.querySelectorAll("[data-card]");
+	const existsCardElements = tableElement.querySelectorAll('[data-card]');
 	if (existsCardElements) {
 		// Удаляем существующую колоду со всеми обработчиками
 		for (let i = 0; i < existsCardElements.length; i++) {
@@ -33,20 +40,18 @@ export const restartHandler = () => {
 
 	// Закрываем меню
 	winMessageElement.hidden = true;
-	rulesElement.hidden = true;
+	closeRules();
 	closeButtonElement.hidden = false;
 
 	// Формируем новую колоду
-	window.setTimeout(() => {
-		createDeck();
-	}, TIMEOUT);
+	window.setTimeout(createDeck, TIMEOUT);
 
 	// Меняем текст кнопки
 	restartButtonElement.textContent = STATE.restartText;
 
 	// Активируем кнопку расклада (на случай деактивации в предыдущем сеансе игры)
-	reloadButttonElement.removeAttribute("disabled");
+	reloadButttonElement.removeAttribute('disabled');
 
 	// Обновляем title кнопки расклада
 	reloadButttonElement.title = `${STATE.reloadTitle} ${STATE.numberOfSlots - 1} ${STATE.reloadPlural}`;
-};
+}

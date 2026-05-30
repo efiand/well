@@ -1,11 +1,11 @@
-import { rulesElement } from "#client/modules/settings.js";
+import { rulesElement } from '#client/modules/settings.js';
 
 /**
  * Открытие модального окна с правилами
  *
  * @type {(event: PointerEvent) => void}
  */
-export const rulesOpenHandler = (event) => {
+export function rulesOpenHandler(event) {
 	event.preventDefault();
 
 	rulesElement.hidden = false;
@@ -13,4 +13,4 @@ export const rulesOpenHandler = (event) => {
 	if (event.target instanceof HTMLElement) {
 		event.target.blur();
 	}
-};
+}

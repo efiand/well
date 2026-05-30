@@ -1,8 +1,10 @@
-import { execSync } from "node:child_process";
-import { createRequire } from "node:module";
+import { execSync } from 'node:child_process';
+import pkg from '../package.json' with { type: 'json' };
 
-const require = createRequire(import.meta.url);
-const { devDependencies = {} } = require("../package.json");
+const { devDependencies = {} } = pkg;
 
-const packages = Object.keys(devDependencies);
-execSync(`npm i -DE ${packages.join("@latest ")}@latest`);
+const list = Object.keys(devDependencies);
+if (list.length) {
+	const command = `npm i -DE ${list.join('@latest ')}@latest && npx update-browserslist-db@latest --yes`;
+	execSync(command, { stdio: 'ignore' });
+}

@@ -1,8 +1,8 @@
 {
-	"watch": ["app", "src"],
 	"env": {
 		"DEV": true,
 		"PORT": 3103
 	},
-	"ext": "css,js,svg"
+	"ext": "css,js,svg",
+	"watch": ["app", "src"]
 }

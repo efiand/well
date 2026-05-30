@@ -1,17 +1,16 @@
-import { getDropCoords } from "#client/modules/functions/get-drop-coords.js";
-import { reloadHandler } from "#client/modules/functions/reload-handler.js";
-import { restartHandler } from "#client/modules/functions/restart-handler.js";
-import { rulesOpenHandler } from "#client/modules/functions/rules-open-handler.js";
+import { getDropCoords } from '#client/modules/functions/get-drop-coords.js';
+import { reloadHandler } from '#client/modules/functions/reload-handler.js';
+import { closeRules, restartHandler } from '#client/modules/functions/restart-handler.js';
+import { rulesOpenHandler } from '#client/modules/functions/rules-open-handler.js';
 import {
 	closeButtonElement,
 	deckComponents,
 	reloadButttonElement,
 	restartButtonElement,
-	rulesElement,
 	rulesOpenerElement,
-} from "#client/modules/settings.js";
-import { STATE } from "#client/modules/state.js";
-import "#client/modules/tg";
+} from '#client/modules/settings.js';
+import { STATE } from '#client/modules/state.js';
+import '#client/modules/tg.js';
 
 const CARDS_IN_KEYS = 14;
 
@@ -23,13 +22,11 @@ for (let i = 0; i < suitKeys.length; i++) {
 	}
 }
 
-window.addEventListener("resize", getDropCoords);
-rulesOpenerElement.addEventListener("click", rulesOpenHandler);
-reloadButttonElement.addEventListener("click", reloadHandler);
-restartButtonElement.addEventListener("click", restartHandler);
-closeButtonElement.addEventListener("click", () => {
-	rulesElement.hidden = true;
-});
+window.addEventListener('resize', getDropCoords);
+rulesOpenerElement.addEventListener('click', rulesOpenHandler);
+reloadButttonElement.addEventListener('click', reloadHandler);
+restartButtonElement.addEventListener('click', restartHandler);
+closeButtonElement.addEventListener('click', closeRules);
 
 // Начальное состояние
 getDropCoords();

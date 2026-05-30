@@ -1,29 +1,27 @@
-import { html } from "#common/utils/mark-template.js";
+import { YANDEX_METRIKA_ID } from '#common/constants.js';
 
-export const YANDEX_METRIKA_TEMPLATE = html`
+export const YANDEX_METRIKA_TEMPLATE = /* html */ `
 	<!-- Yandex.Metrika counter -->
 	<script>
 		setTimeout(() => {
 			(function (m, e, t, r, i, k, a) {
-				m[i] =
-					m[i] ||
-					(function () {
-						(m[i].a = m[i].a || []).push(arguments);
-					});
+				m[i] = m[i] || function () {
+					(m[i].a = m[i].a || []).push(arguments);
+				};
 				m[i].l = 1 * new Date();
 				for (var j = 0; j < document.scripts.length; j++) {
 					if (document.scripts[j].src === r) {
 						return;
 					}
 				}
-				(k = e.createElement(t)),
-					(a = e.getElementsByTagName(t)[0]),
-					(k.async = 1),
-					(k.src = r),
-					a.parentNode.insertBefore(k, a);
+				k = e.createElement(t);
+				a = e.getElementsByTagName(t)[0];
+				k.async = 1;
+				k.src = r;
+				a.parentNode.insertBefore(k, a);
 			})(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-			ym(99938263, "init", {
+			ym(${YANDEX_METRIKA_ID}, "init", {
 				accurateTrackBounce: true,
 				clickmap: true,
 				trackLinks: true,
@@ -32,7 +30,7 @@ export const YANDEX_METRIKA_TEMPLATE = html`
 		}, 3000);
 	</script>
 	<noscript>
-		<img class="_visually-hidden" src="https://mc.yandex.ru/watch/99938263" alt="">
+		<img class="_visually-hidden" src="https://mc.yandex.ru/watch/${YANDEX_METRIKA_ID}" alt="">
 	</noscript>
 	<!-- /Yandex.Metrika counter -->
 `;

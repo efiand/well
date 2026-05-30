@@ -1,6 +1,8 @@
-// Перемешивание массива
-
-/** @type {(items: unknown[]) => void} */
+/**
+ * Перемешивание массива
+ *
+ * @type {(items: unknown[]) => void}
+ * */
 export function shuffleArray(itens) {
 	for (let i = itens.length - 1; i > 0; i--) {
 		const j = Math.floor(Math.random() * (i + 1));

@@ -1,3 +1,3 @@
-import { createApp } from "#server/lib/app.js";
+import { createApp } from '#server/lib/app.js';
 
 createApp();
